@@ -1,0 +1,33 @@
+{
+  "name": "desktop-my-orange",
+  "version": "1.0.0",
+  "private": true,
+  "description": "我的橘色桌面卜卜",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "local.desktop.my-orange",
+    "productName": "橘色卜卜",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "src/assets/icon.ico",
+      "executableName": "橘色卜卜"
+    }
+  }
+}
